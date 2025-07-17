@@ -3,6 +3,7 @@ import Formulaire from './composants/Formulaire';
 import ListeTaches from './composants/ListeTaches';
 import Filtres from './composants/Filtres';
 import useTaches from './hooks/useTaches';
+import './index.css';
 
 function App() {
   const {
@@ -26,8 +27,18 @@ function App() {
     .filter((t) => t.texte.toLowerCase().includes(recherche.toLowerCase()));
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '600px', margin: '0 auto' }}>
-      <h1>Ma Liste de Tâches</h1>
+    <div
+      style={{
+        width: '100%',
+        maxWidth: '600px',
+        padding: '2rem',
+        boxSizing: 'border-box',
+      }}
+    >
+      <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        Ma Liste de Tâches
+      </h1>
+
       <Formulaire ajouterTache={ajouterTache} />
 
       {taches.length > 0 && (
@@ -44,6 +55,8 @@ function App() {
               borderRadius: '8px',
               marginBottom: '1rem',
               fontSize: '1rem',
+              backgroundColor: '#121212',
+              color: '#fff',
             }}
           />
 
