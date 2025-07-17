@@ -7,7 +7,7 @@ Il a été enrichi d’une infrastructure de **tests automatisés** avec **Vites
 
 ## 🔗 Lien de déploiement
 
-➡️ [Voir le projet sur Netlify](https://ton-url-netlify.netlify.app)  
+➡️ [Voir le projet sur Netlify](https://tachefacile.netlify.app)  
 (_remplace par ton vrai lien si besoin_)
 
 ---
