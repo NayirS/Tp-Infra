@@ -1,12 +1,45 @@
-# React + Vite
+# 🧩 Projet React - Tableau de Tâches (Static Page + Tests)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une **page statique de suivi de tâches**, construite avec **React** et **Vite**, puis déployée via **Netlify**.  
+Il a été enrichi d’une infrastructure de **tests automatisés** avec **Vitest** et **React Testing Library**, dans le cadre d’un TP de pratique professionnelle.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Lien de déploiement
 
-## Expanding the ESLint configuration
+➡️ [Voir le projet sur Netlify](https://ton-url-netlify.netlify.app)  
+(_remplace par ton vrai lien si besoin_)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Technologies utilisées
+
+- React 18
+- Vite
+- Netlify (déploiement)
+- Vitest (tests unitaires)
+- Testing Library
+- ESLint 9 avec `eslint.config.js`
+- JSDOM (environnement de test navigateur)
+
+---
+
+## 📁 Structure du projet
+
+```txt
+todo-app-react/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── App.jsx              # Page principale avec liste de tâches statiques
+│   ├── App.test.jsx         # Test unitaire simple (présence du titre, tâches, statuts)
+│   └── test/
+│       ├── setup.js         # Configuration globale des tests (mock localStorage, jest-dom)
+│       └── setup.test.js    # Vérifie que l'environnement de test fonctionne
+├── .gitignore               # Ignore node_modules, .env, etc.
+├── index.html               # Point d'entrée HTML (géré par Vite)
+├── vite.config.js           # Configuration de Vite + tests
+├── tsconfig.json            # Permet à l'éditeur de reconnaître les types de test (vi, etc.)
+├── eslint.config.js         # Configuration ESLint moderne avec globals vitest
+├── package.json             # Dépendances, scripts NPM
+└── README.md                # Ce fichier 📄
