@@ -1,0 +1,52 @@
+
+.formulaire {
+  margin-bottom: 2rem;
+}
+
+.groupe {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.champ {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.champ:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.erreurChamp {
+  border-color: red;
+}
+
+.bouton {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.bouton:hover {
+  background-color: #0056b3;
+}
+
+.messageErreur {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.compteur {
+  text-align: right;
+  font-size: 0.75rem;
+  color: #6c757d;
+}

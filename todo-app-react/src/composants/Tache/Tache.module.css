@@ -1,0 +1,26 @@
+.tache {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+
+.terminee .texte {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.texte {
+  cursor: pointer;
+}
+
+.supprimer {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
