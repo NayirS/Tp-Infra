@@ -57,5 +57,5 @@ Les tests couvrent notamment :
 
 ###  Résultat des tests
 
-![Résultat des tests](Images/Capture%20d'%C3%A9cran%202025-07-18%20101428.png)
+![Résultat des tests](../Images/Capture%20d'%C3%A9cran%202025-07-18%20101428.png)
 
