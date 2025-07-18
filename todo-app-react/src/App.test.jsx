@@ -1,21 +1,22 @@
-import { describe, test, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import App from './App'
+// src/App.test.jsx
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { describe, test, expect } from "vitest";
 
-describe('App', () => {
-  test('affiche le titre principal', () => {
-    render(<App />)
-    expect(screen.getByText(/tableau de tâches/i)).toBeInTheDocument()
-  })
+describe("App", () => {
+  test("affiche le titre principal", () => {
+    render(<App />);
+    expect(screen.getByText(/ma liste de tâches/i)).toBeInTheDocument();
+  });
 
-  test('affiche au moins une tâche dans la liste', () => {
-    render(<App />)
-    const items = screen.getAllByRole('listitem')
-    expect(items.length).toBeGreaterThan(0)
-  })
+  test("affiche le formulaire", () => {
+    render(<App />);
+    expect(screen.getByPlaceholderText(/ajouter une tâche/i)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /ajouter/i })).toBeInTheDocument();
+  });
 
-  test('affiche un statut pour chaque tâche', () => {
-    render(<App />)
-    expect(screen.getAllByText(/à faire|en cours|terminée/i).length).toBeGreaterThan(0)
-  })
-})
+  test("affiche le message aucune tâche", () => {
+    render(<App />);
+    expect(screen.getByText(/aucune tâche pour l’instant/i)).toBeInTheDocument();
+  });
+});
